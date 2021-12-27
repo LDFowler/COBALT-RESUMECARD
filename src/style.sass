@@ -1,0 +1,341 @@
+// 用色定義區
+$dark: #0000CC
+$bg: #40E0D0
+$sub: #0047AB
+$light: #00CCCC
+
+//字體定義區
+$fmh: lato
+$fmp: karla
+$base-size: 10px
+
+//mixin設定區
+@mixin abso
+  position: absolute
+  
+@mixin ib
+  display: inline-block
+
+@mixin center
+  position: absolute
+  top: 50%
+  left: 50%
+  transfrom: translateX(-50%) translateY(-50%)
+  
+@mixin size($w,$h)
+  width: $w
+  height: $h
+  
+@mixin t-dr
+  transition-duration: 0.5s
+  
+@mixin t-dl
+  transition-delay: 0.5s
+  
+@mixin clear
+  opacity: 0
+
+@mixin unclear
+  opacity: 1
+  
+//CSS開始
+
+
+*
+  // border: solid 1px white
+  vertical-align: top
+  box-sizing: border-box
+  background-color: $bg
+  color: $dark
+  font-family: $fmh, sans-serif
+  font-weight: 300
+  line-height: 36px
+  +t-dr
+
+html,body
+  margin: 0px
+  padding: 0px
+  width: 100%
+
+
+.top
+  height: 300px
+  background-color: #24260f
+
+
+.top-content
+  +size(1027px,300px)
+  background-color: $dark
+  margin-right: auto
+  margin-left: auto
+
+  
+.photo
+  +size(200px,275px)
+  +ib
+  margin-top: 20px
+  margin-left: 300px
+  background-color: $dark
+
+  
+  h1
+    text-align: center
+    font-weight: 500
+    font-size: 30px
+    position: relative
+    bottom: 15px
+    background-color: $dark
+    color: $bg
+    margin-top: 30px
+
+
+img
+  +size(200px,200px)
+  border-radius: 100%
+  
+
+.info
+  +size(450px,275px)
+  margin-top: 20px
+  background-color: $dark
+
+
+.photo,.info
+  +ib
+
+.title
+  +size(350px,80px)
+  margin-left: 50px
+  padding-top: 15px
+  text-align: center
+  font-size: 26px
+  line-height: 80px
+  border-bottom: solid 3px $sub
+  background-color: $dark
+  color: $bg
+
+
+.contact
+  +ib
+  margin-left: 50px
+  margin-top: 20px
+
+.url
+  padding-left: 10px
+  padding-top: 10px
+  background-color: $dark
+  color: $bg
+  & span
+    line-height: 36px
+    font-family: $fmp, sans-serif
+    padding-left: 10px
+    background-color: $dark
+    color: $bg
+
+.max-width
+  width: 1027px
+  margin-right: auto
+  margin-left: auto
+
+.left,.right
+  +ib
+  +size(49%,700px)
+
+.con-title
+  +size(450px,50px)
+  font-weight: 900
+  font-size: $base-size*2
+  color: $sub
+  margin-left: 30px
+  margin-top: 30px
+  padding-top: 15px
+  border-bottom: solid 1px $dark
+
+.ex-con-left
+  +ib
+  +size(50px,250px)
+  margin-left: 30px
+  & .dot
+    +size(10px,10px)
+    border-radius: 100%
+    background-color: $dark
+    margin-left: 20px
+    margin-top: 30px
+  & .vertical-line
+    +size(3px,170px)
+    border-radius: 10%
+    background-color: $sub
+    margin-left: 24px
+    margin-top: 5px
+
+.ex-con-right
+  +ib
+  +size(400px,250px)
+  & h3
+    margin: 10px
+    margin-top: 20px
+    font-size: $base-size*2
+    font-weight: bold
+    line-height: 20px
+  & h5
+    margin: 10px
+    font-size: $base-size*2
+    font-weight: bold
+    color: $sub
+  & span
+    font-size: $base-size*1.6
+    color: $dark
+    margin: 10px
+  & p
+    margin: 10px 10px 0px 10px
+    line-height: 20px
+    font-size: $base-size*1.6
+  & br
+    line-height: 26px
+    
+.ed-con-left
+  +ib
+  +size(50px,250px)
+  margin-left: 30px
+  & .dot
+    +size(10px,10px)
+    border-radius: 100%
+    background-color: $dark
+    margin-left: 20px
+    margin-top: 30px
+  & .vertical-line
+    +size(3px,170px)
+    border-radius: 10%
+    background-color: $sub
+    margin-left: 24px
+    margin-top: 5px
+
+.ed-con-right
+  +ib
+  +size(400px,250px)
+  & h3
+    margin: 10px
+    margin-top: 20px
+    font-size: $base-size*2
+    font-weight: bold
+    line-height: 20px
+  & h5
+    margin: 10px
+    font-size: $base-size*2
+    font-weight: bold
+    color: $sub
+  & span
+    font-size: $base-size*1.6
+    color: $dark
+    margin: 10px
+  & p
+    margin: 10px 10px 0px 10px
+    line-height: 20px
+    font-size: $base-size*1.6
+  & br
+    line-height: 26px
+  
+
+
+
+
+.skills
+  height: 200px
+
+
+.sk-title
+  margin-left: 10px
+  margin-top: 0px
+
+.skill-con-left,.skill-con-right
+  +ib
+  +size(230px,130px)
+  margin-top: 20px
+
+.skill-bar
+  span
+    +ib
+    font-weight: bold
+    margin-left: 10px
+    width: 90px
+
+.skill-level
+  +ib
+  margin-left: 10px
+
+.yes
+  +ib
+  +size(15px,15px)
+  border-radius: 100%
+  background-color: $sub
+  margin-top: 10px
+  margin-right: 2px
+
+.no
+  +ib
+  +size(15px,15px)
+  border-radius: 100%
+  background-color: $light
+  margin-top: 10px
+  margin-right: 2px
+
+.portfolio
+  height: 200px
+  
+
+.po-con-right
+  +ib
+  +t-dr
+  +size(150px,160px)
+  margin-left: 10px
+  padding-top: 10px
+  opacity: 0.5
+  position: relative
+  top: 0px
+  & span
+    +ib
+    font-weight: bold
+    width: 100px
+    text-align: center
+  &:hover
+    opacity: 1
+  &:active
+    top: 10px
+  
+
+.po-con-middle
+  +ib
+  +size(150px,160px)
+  margin-left: 10px
+  padding-top: 10px
+  opacity: 0.5
+  position: relative
+  top: 0px
+  & span
+    +ib
+    font-weight: bold
+    width: 100px
+    text-align: center
+  &:hover
+    opacity: 1
+  &:active
+    top: 10px
+  
+.po-con-left
+  +ib
+  +size(150px,160px)
+  margin-left: 10px
+  padding-top: 10px
+  opacity: 0.5
+  position: relative
+  top: 0px
+  & span
+    +ib
+    font-weight: bold
+    width: 100px
+    text-align: center
+    padding-right: 15px
+  &:hover
+    opacity: 1
+  &:active
+    top: 10px
